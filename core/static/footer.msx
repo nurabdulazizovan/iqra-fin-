@@ -1,0 +1,87 @@
+		<footer class="site-footer clearfix">
+			<div class="site-footer__main">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-5 footer-block">
+							<aside class="widget-text">
+								<div class="footer__logo">
+									<a href="#">
+										<img src="/img/logo.png" alt="">
+									</a>
+								</div>
+								<div class="footer__info">
+									<p><i class="fa fa-map-marker" aria-hidden="true"></i>Azərbaycan. Baki şəhəri.
+										Yasamal rayonu</p>
+									<p>
+										<span><i class="fa fa-mobile" aria-hidden="true"></i>%phone_num%</span>
+										<span><i class="fa fa-envelope"></i><a href="mailto:info@example.com">info@example.com</a></span>
+									</p>
+
+								</div>
+							</aside>
+						</div>
+						<div class="col-md-4 footer-block">
+							<aside class="widget-menu-item">
+								<h3 class="widget-title">Faydalı linklər</h3>
+								<ul class="columns-2">
+									<li><a href="about.html">%aboutus%</a></li>
+									<li><a href="contact.html">%contactus%</a></li>
+
+									<li><a href="product_grid.html">%games%</a></li>
+
+								</ul>
+							</aside>
+						</div>
+
+						<div class="col-md-3 footer-block ">
+							<aside class="widget_recentpost">
+								<h3 class="widget-title">Enidirmlərdən yararlanın</h3>
+								<ul>
+									<li>
+										<span class="post_categories"><a href="#" rel="tag">Xtox One</a></span>
+										<h3 class="post-title"><a href="#">Arrowhead Debuts New Signature
+												Concession Items</a></h3>
+										<span class="post-date">May 28, 2018</span>
+									</li>
+									<li>
+										<span class="post_categories"><a href="#" rel="tag">Xtox One</a></span>
+										<h3 class="post-title"><a href="#">Arrowhead Debuts New Signature
+												Concession Items</a></h3>
+										<span class="post-date">May 28, 2018</span>
+									</li>
+								</ul>
+							</aside>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="site-footer__copyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12  d-flex justify-content-between align-items-center">
+							<div class="copyright">
+								Copyright © 2020 <a href="javascript:void(0)">ENM Company</a>.
+							</div>
+							<div class="payment">
+								<img src="/img/payment.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div id="back-to-top"></div>
+	</div>
+	<script src="/js/main.js"></script>
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/slick.min.js"></script>
+	<script src="/js/slick-animation.min.js"></script>
+	<script src="/js/jquery-ui.min.js"></script>
+	<script src="/js/jquery.waypoints.js"></script>
+	<script src="/js/jquery.counterup.min.js"></script>
+	<script src="/js/jquery.magnific-popup.min.js"></script>
+	<script src="/js/jquery.magnific-popup.min.js"></script>
+	<script src="/js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<div class="breadcrumb section-bg" style="background-image:url(/img/bg_breadcrumb.jpg)">
+	<div class="container">
+		<div class="row">
+			<div class="col col-md-12">
+				<h1>Bizimlə əlaqə</h1>
+				<ol class="item-breadcrumb">
+					<li><a href="/">Ana səhifə</a></li>
+					<li>Bizimlə Əlaqə</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="contact_form">
+	<h3 class="contact_heading text-center pt-50 pb-30">
+		Bizə yazın.
+	</h3>
+
+	<form action="#" method="post" id="commentform" class="comment-form" novalidate="">
+		<div class="row">
+			<div class="form-group col-md-4">
+				<input type="text" name="author" class="form-control" placeholder="Ad Soyad" id="author" value="" aria-required="true">
+			</div>
+			<div class="form-group col-md-4">
+				<input type="text" name="email" class="form-control" placeholder="mail" id="email" value="" aria-required="true">
+			</div>
+			<div class="form-group col-md-4">
+				<input type="text" name="phone" class="form-control" placeholder="Əlaqə nömrəsi" id="phone" value="" aria-required="true">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<textarea rows="8" id="comment" class="form-control" placeholder="Message" name="comment" aria-required="true"></textarea>
+		</div>
+		<div class="form-submit text-center">
+			<input name="submit" type="submit" id="submit" class="btn btn-primary" value="Göndər">
+			<input type="hidden" name="comment_post_ID" value="" id="comment_post_ID">
+			<input type="hidden" name="comment_parent" id="comment_parent" value="">
+		</div>
+	</form>
+</div>

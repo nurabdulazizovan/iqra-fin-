@@ -1,0 +1,8 @@
+const fs = require('fs')
+const {join} = require('path')
+
+module.exports = (function() {
+
+	return fs.readFileSync(join(__dirname, "./static/error.msx"), 'utf8')
+
+})()

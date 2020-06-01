@@ -1,0 +1,28 @@
+<div class="breadcrumb section-bg" style="background-image:url(/img/bg_breadcrumb.jpg)">
+	<!-- container -->
+	<div class="container">
+		<div class="row">
+			<div class="col col-md-12">
+				<h1>Oyunlar haqqında məlumat</h1>
+				<ol class="item-breadcrumb">
+					<li><a href="/">Ana səhifə</a></li>
+					<li>Məlumatlandırma</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</div>
+
+<table>
+	<thead>
+		<tr>
+			<th>%gamename%</th>
+			<th>%ingamecurrency%</th>
+			<th>Qiymət</th>
+			<th>Almaq</th>
+		</tr>
+	</thead>
+	<tbody>
+		%gamesells%
+	</tbody>
+</table>

@@ -1,0 +1,26 @@
+<!-- =====================================
+	==== Start breadcrumb -->
+<div class="breadcrumb section-bg" style="background-image:url(/img/bg_breadcrumb.jpg)">
+	<!-- container -->
+	<div class="container">
+		<div class="row">
+			<div class="col col-md-12">
+				<h1>Bütün oyunlar</h1>
+				<ol class="item-breadcrumb">
+					<li><a href="/">Ana səhifə</a></li>
+					<li>Oyunlar</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+	<!-- /container -->
+</div>
+<!-- =====================================
+	==== End breadcrumb -->
+<!-- oyunlar -->
+<div class="container">
+	<h1 style="text-align: center;">Ən çox satılan oyunlar</h1>
+	<div class="row">
+		%gameList%
+	</div>
+</div>

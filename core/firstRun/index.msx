@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>%domain_name%|Post Install</title>
+</head>
+<body>
+
+	<big>
+		<center>
+			Please Wait
+		</center>
+	</big>
+
+	<script>
+		window.history.pushState({}, "", "/postInstallation");
+		// window.location.replace("/")
+	</script>
+</body>
+</html>

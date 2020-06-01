@@ -1,0 +1,104 @@
+<div class="breadcrumb section-bg" style="background-image:url(/img/bg_breadcrumb.jpg)">
+	<div class="container">
+		<div class="row">
+			<div class="col col-md-12">
+				<h1>Haqqımızda</h1>
+				<ol class="item-breadcrumb">
+					<li><a href="/">Ana səhifə</a></li>
+					<li>Haqqımızda</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="main-content">
+	<div class="page-about">
+		<div class="section-counter clearfix">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 col-md-12">
+						<h2 class="heading__title">
+							%header%
+						</h2>
+						<div class="heading__description pt-40 pb-60">%headertext%</div>
+
+						<div class="row">
+							<div class="col-md-6 counter_box">
+								<i class="fa fa-folder-open" aria-hidden="true"></i>
+								<div class="counter_number">
+									<span class="counter">%uc1%</span><span>+</span>
+									<h5 class="counter_title">%ut1%</h5>
+								</div>
+							</div>
+							<div class="col-md-6 counter_box">
+								<i class="fa fa-users" aria-hidden="true"></i>
+								<div class="counter_number">
+									<span class="counter">%uc2%</span><span>+</span>
+									<h5 class="counter_title">%ut2%</h5>
+								</div>
+							</div>
+							<div class="col-md-6 counter_box">
+								<i class="fa fa-fire" aria-hidden="true"></i>
+								<div class="counter_number">
+									<span class="counter">%uc3%</span><span>%</span>
+									<h5 class="counter_title">%ut3%</h5>
+								</div>
+							</div>
+							<div class="col-md-6 counter_box">
+								<i class="fa fa-map-signs" aria-hidden="true"></i>
+								<div class="counter_number">
+									<span class="counter">%uc4%</span>
+									<h5 class="counter_title">%ut4%</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-5 col-md-5 d-none d-lg-block">
+						<img src="/img/about/%rightimage%" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section-about-info section-bg" style="background-image:url(/img/about/%leftimage%)">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-6 col-lg-4 col-md-12">
+					</div>
+					<div class="col-xl-6 col-lg-8 col-md-12">
+						<h2 class="heading__title">
+							%header2%
+						</h2>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="about_info">
+									<h4 class="about_info__heading">%dht1%</h4>
+									<div class="about_info__description">%dtt1%</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="about_info">
+									<h4 class="about_info__heading">%dht2%</h4>
+									<div class="about_info__description">%dtt2%</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="about_info">
+									<h4 class="about_info__heading">%dht3%</h4>
+									<div class="about_info__description">%dtt3%</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="about_info">
+									<h4 class="about_info__heading">%dht4%</h4>
+									<div class="about_info__description">%dtt4%</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

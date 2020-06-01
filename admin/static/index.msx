@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+
+	<style>
+       * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+		section.windows > div.window {
+			display: none;
+		}
+		section.windows > div.window.activeWindow {
+			display: block;
+		}
+		.hidden {
+			display: none;
+		}
+        body{
+           background-color: #f2f2f2;
+        }
+        .leftsidebar ul{
+            list-style: none;
+            background-color: #42a2db;
+            padding: 10px;
+        }
+        .leftsidebar ul li{
+        font-size: 25px;
+        display: inline-block;
+        color: #fff;
+        margin-right: 30px;
+        padding: 10px 20px;
+        transition: background-color 1.5s;
+        }
+        .leftsidebar ul li:hover{
+          background-color: #fff;
+          color: #42a2db;
+          cursor: pointer;
+          transition: background-color 1.5s;
+        }
+        form{
+        padding: 50px;
+        }
+        label{
+        font-size: 20px;
+        color: #42a2db;
+        }
+        input,
+        textarea{
+          width: 100%;
+          padding:20px;
+          margin-bottom: 20px;
+          border: 2px solid #f3f3f3;
+         }
+         .nonSetup{
+         padding: 10px;
+         margin-top: 20px;
+         }
+         button{
+          color: #fff;
+          background-color: #42a2db;
+          border: none;
+          border-radius: 10px;
+          padding: 10px 15px;
+          cursor: pointer;
+           margin-bottom: 20px;
+           width: 100px;
+         }
+         button:hover{
+           background-color: #0e6598;
+         }
+         img{
+         max-width: 50% !important;
+         padding: 30px;
+         }
+         .about,
+         .gamecurrency,
+         th{
+         font-size: 20px;
+          margin-left: 30px;
+          margin-bottom:20px;
+          color: #11999e;
+         }
+         th{
+         padding: 30px;
+         }
+         .editFile,
+         .addNewCost{
+           background-color: #42a2db;
+           padding: 10px;
+           color: #fff;
+           width: 200px;
+           cursor: pointer;
+           text-align: center;
+           margin-left: 30px;
+           border-radius: 6px;
+           
+         }
+         .editFile:hover,
+         .addNewCost:hover{
+            background-color: #0e6598;
+         }
+         h1{
+         text-align: center;
+         font-size: 30PX;
+         color: #42a2db;
+         }
+         .user{
+         font-size: 30px;
+         color:  #11999e;
+         padding: 30px;
+         }
+         .add,
+         .remove{
+         margin-left: 30px;
+         }
+	</style>
+
+</head>
+<body>
+
+	<div class="wrapper">
+		
+		<div class="leftsidebar">
+			<ul>
+				<li>
+					<a data-window="settings">
+						Tənzimləmələr
+					</a>
+				</li>
+				<li>
+					<a data-window="games">
+						Oyunlar
+					</a>
+				</li>
+				<li>					<a data-window="users">
+						İstifadəçilər
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="center">
+			
+			<section class="windows">
+				<div class="window settingsWindow activeWindow">
+					<form action="/admin/submit" method="POST">
+						
+						<input type="hidden" name="code" value="settings" />
+
+						<label for="navbar_mainpage">Navbar Ana Səhifə mətn</label>
+						<input id="navbar_mainpage" name="navbar_mainpage" type="text" value="%navbar_mainpage%" />
+						<br />
+
+						<label for="navbar_games">Navbar oyunlar mətn</label>
+						<input id="navbar_games" name="navbar_games" type="text" value="%navbar_games%" />
+						<br />
+
+						<label for="navbar_aboutus">Navbar haqqımızda mətn</label>
+						<input id="navbar_aboutus" name="navbar_aboutus" type="text" value="%navbar_aboutus%" />
+						<br />
+
+						<label for="navbar_contactus">Navbar bizimlə əlaqə mətn</label>
+						<input id="navbar_contactus" name="navbar_contactus" type="text" value="%navbar_contactus%" />
+						<br />
+
+						<label for="header_contact_num">Əlaqə nömrəsi</label>
+						<input id="header_contact_num" name="header_contact_num" type="number" value="%header_contact_num%" />
+						<br />
+
+						<label for="header_email">Email adresi</label>
+						<input id="header_email" name="header_email" type="text" value="%header_email%" />
+						<br />
+
+						<label for="off_FB">FaceBook URL  linki</label>
+						<input id="off_FB" name="off_FB" type="text" value="%off_FB%" />
+						<br />
+
+						<label for="off_IG">Instagram URL linki</label>
+						<input id="off_IG" name="off_IG" type="text" value="%off_IG%" />
+						<br />
+
+						<label for="off_TW">Twitter URL linki</label>
+						<input id="off_TW" name="off_TW" type="text" value="%off_TW%" />
+						<br />
+
+						<label for="whywe_guarantie">Niyə biz səhifəsi qaranti mətni</label>
+						<input id="whywe_guarantie" name="whywe_guarantie" type="text" value="%whywe_guarantie%" />
+						<br />
+
+						<label for="whywe_quality">niyə biz səhifəsi keyfiyyət mətni</label>
+						<input id="whywe_quality" name="whywe_quality" type="text" value="%whywe_quality%" />
+						<br />
+
+						<label for="whywe_help">niyə biz səhifəsi köməklə bağlı mətn</label>
+						<input id="whywe_help" name="whywe_help" type="text" value="%whywe_help%" />
+						<br />
+
+						<label for="aboutus_block1_mtext">%navbar_aboutus% TopSide Header Text</label>
+						<input id="aboutus_block1_mtext" name="aboutus_block1_mtext" type="text" value="%aboutus_block1_mtext%" />
+						<br />
+
+						<label for="aboutus_block1_header">%navbar_aboutus% Haqqımızda səhifəsi yuxarıdakı mətn</label>
+						<input id="aboutus_block1_header" name="aboutus_block1_header" type="text" value="%aboutus_block1_header%" />
+						<br />
+
+						<label for="aboutus_block1_int">aboutus_block1_int Haqqımızda səhifəsi 1ci göstərici rəqəmələr</label>
+						<input id="aboutus_block1_int" name="aboutus_block1_int" type="text" value="%aboutus_block1_int%" />
+						<br />
+
+						<label for="aboutus_block1_text">aboutus_block1_text  Haqqımızda səhifəsi 1ci göstərici mətn</label>
+						<input id="aboutus_block1_text" name="aboutus_block1_text" type="text" value="%aboutus_block1_text%" />
+						<br />
+
+						<label for="aboutus_block2_int">aboutus_block2_int Haqqımızda səhifəsi 2ci göstərici rəqəmlər</label>
+						<input id="aboutus_block2_int" name="aboutus_block2_int" type="text" value="%aboutus_block2_int%" />
+						<br />
+
+						<label for="aboutus_block2_text">aboutus_block2_text Haqqımızda səhifəsi 2ci göstərici mətn</label>
+						<input id="aboutus_block2_text" name="aboutus_block2_text" type="text" value="%aboutus_block2_text%" />
+						<br />
+
+						<label for="aboutus_block3_int">aboutus_block3_int Haqqımızda səhifəsi 3cu göstərici rəqəmlər</label>
+						<input id="aboutus_block3_int" name="aboutus_block3_int" type="text" value="%aboutus_block3_int%" />
+						<br />
+
+						<label for="aboutus_block3_text">aboutus_block3_text Haqqımızda səhifəsi 3cu göstərici mətn</label>
+						<input id="aboutus_block3_text" name="aboutus_block3_text" type="text" value="%aboutus_block3_text%" />
+						<br />
+
+						<label for="aboutus_block4_int">aboutus_block4_int Haqqımızda səhifəsi 4cu göstərici rəqəmlər</label>
+						<input id="aboutus_block4_int" name="aboutus_block4_int" type="text" value="%aboutus_block4_int%" />
+						<br />
+
+						<label for="aboutus_block4_text">aboutus_block4_text Haqqımızda səhifəsi 4cu göstərici mətn</label>
+						<input id="aboutus_block4_text" name="aboutus_block4_text" type="text" value="%aboutus_block4_text%" />
+						<br />
+
+						<label for="aboutus_rightimage">%navbar_aboutus% haqqımızda şəkil sağ tərəfdə</label>
+						<input class="nonSetup" id="aboutus_rightimage" type="file" />
+						<input id="aboutus_rightimage_content" name="aboutus_rightimage" type="hidden" value="%aboutus_rightimage%" />
+						<br />
+
+						<label for="aboutus_block1_header2">%navbar_aboutus% Haqqımızda səhifəsi 2ci hissə əsas başlıq</label>
+						<input id="aboutus_block1_header2" name="aboutus_block1_header2" type="text" value="%aboutus_block1_header2%" />
+						<br />
+
+						<label for="aboutus_bottomblock1_header">%navbar_aboutus% Haqqımızda səhifəsi 2ci hissə 1ci alt başlıq</label>
+						<input id="aboutus_bottomblock1_header" name="aboutus_bottomblock1_header" type="text" value="%aboutus_bottomblock1_header%" />
+						<br />
+
+						<label for="aboutus_bottomblock1_text">%navbar_aboutus% Haqqımızda səhifəsi 2ci hissə 1ci alt mətn</label>
+						<input id="aboutus_bottomblock1_text" name="aboutus_bottomblock1_text" type="text" value="%aboutus_bottomblock1_text%" />
+						<br />
+
+						<label for="aboutus_bottomblock2_header">%navbar_aboutus% Haqqımızda səhifəsi 2ci hissə 2ci alt başlıq</label>
+						<input id="aboutus_bottomblock2_header" name="aboutus_bottomblock2_header" type="text" value="%aboutus_bottomblock2_header%" />
+						<br />
+
+						<label for="aboutus_bottomblock2_text">%navbar_aboutus% Haqqımızda səhifəsi 2ci hissə 2ci alt mətn</label>
+						<input id="aboutus_bottomblock2_text" name="aboutus_bottomblock2_text" type="text" value="%aboutus_bottomblock2_text%" />
+						<br />
+
+						<label for="aboutus_bottomblock3_header">%navbar_aboutus% Haqqımızda səhifəsi 2ci hissə 3cu alt başlıq</label>
+						<input id="aboutus_bottomblock3_header" name="aboutus_bottomblock3_header" type="text" value="%aboutus_bottomblock3_header%" />
+						<br />
+
+						<label for="aboutus_bottomblock3_text">%navbar_aboutus% Haqqımızda səhifəsi 2ci hissə 3cu alt mətn</label>
+						<input id="aboutus_bottomblock3_text" name="aboutus_bottomblock3_text" type="text" value="%aboutus_bottomblock3_text%" />
+						<br />
+
+						<label for="aboutus_bottomblock4_header">%navbar_aboutus% Haqqımızda səhifəsi 2ci hissə 4cü alt başlıq</label>
+						<input id="aboutus_bottomblock4_header" name="aboutus_bottomblock4_header" type="text" value="%aboutus_bottomblock4_header%" />
+						<br />
+
+						<label for="aboutus_bottomblock4_text">%navbar_aboutus% Haqqımızda səhifəsi 2ci hissə 4cü alt mətn</label>
+						<input id="aboutus_bottomblock4_text" name="aboutus_bottomblock4_text" type="text" value="%aboutus_bottomblock4_text%" />
+						<br />
+
+						<label for="aboutus_leftimage">%navbar_aboutus% Haqqımızda səhifəsi 2ci hissə  sol tərəfdəki şəkil</label>
+						<input class="nonSetup" id="aboutus_leftimage" type="file" />
+						<input id="aboutus_leftimage_content" type="hidden" name="aboutus_leftimage" value="%aboutus_leftimage%" />
+						<br />
+
+						<button type="submit">Təsdiqlə</button>
+
+					</form>
+				</div>
+				<div class="window gamesWindow">
+
+					<div class="allGames">
+						%all_games%
+					</div>
+
+					<div class="addGame">
+						
+						<h1>Yeni şəkil əlavə et</h1>
+
+						<form action="/admin/submit" method="POST" data-table>
+						
+							<input type="hidden" name="code" value="games" />
+
+							<label for="image">Yeni oynun şəkli</label>
+							<input class="nonSetup" id="image" type="file" />
+							<input id="image_content" name="image" type="hidden" value="" />
+							<br />
+
+							<label for="about">Oyun haqqında</label>
+							<textarea name="about" id="about" cols="30" rows="10"></textarea>
+							<br />
+
+							<label for="ingamecurrency">oyunun qiyməti</label>
+							<input id="ingamecurrency" name="ingamecurrency" type="text" />
+							<br />
+
+							<label for="sells">Biz nə satırıq?</label>
+							<table class="sellsTable">
+								<thead>
+									<tr>
+										<th>Sayı</th>
+										<th>Qiyməti</th>
+										<th>Sətri silin</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="addNewCost" colspan="3">Əlavə et</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<button class="nonSetup" type="submit">Təsdiqlə</button> 
+
+						</form>
+					</div>
+				</div>
+				<div class="window usersWindow">
+					%users%
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<script>
+
+		document.querySelectorAll(".editFile").forEach(e => {
+			e.addEventListener("click", x => {
+				let game = document.querySelectorAll(`.allgamesdata`)[e.getAttribute("data-id")].querySelectorAll(".showData, .editData");
+
+				game['0'].classList.add("hidden")
+				game['1'].classList.remove("hidden")
+
+			})
+		})
+
+		document.querySelectorAll(".users .show .add").forEach(e => {
+			e.addEventListener("click", x => {
+
+				let parentNode = e.parentNode.parentNode
+				parentNode.querySelector(".show").classList.add("hidden")
+				parentNode.querySelector(".edit").classList.remove("hidden")
+
+			})
+		})
+
+		const removeLine = e => {
+			let sellsTable = document.querySelector(".sellsTable tbody")
+			e.target.parentNode.parentNode.parentNode.removeChild(e.target.parentNode.parentNode)
+		}
+
+		document.querySelectorAll(".addNewCost").forEach(e => {
+			e.addEventListener("click", x => {
+
+				let y = document.createElement("tr")
+				let z = document.createElement("td")
+				let a = document.createElement("td")
+				let b = document.createElement("td")
+				let c = document.createElement("input")
+				let d = document.createElement("input")
+				let e = document.createElement("div")
+
+				c.type = "number"
+				c.classList.add("NewGameCounter")
+
+				d.type = "number"
+				d.classList.add("NewGameCoster")
+
+				e.innerHTML = "x"
+				e.setAttribute("style", "text-align: center;")
+				e.onclick = removeLine
+
+				y.appendChild(z)
+				y.appendChild(a)
+				y.appendChild(b)
+				z.appendChild(c)
+				a.appendChild(d)
+				b.appendChild(e)
+
+				let sellsTable = x.target.parentNode.parentNode
+
+				sellsTable.insertBefore(y, sellsTable.lastElementChild)
+
+			})
+		})
+
+
+		const getCosts = el => {
+
+			let sellsTable = el
+
+			let
+				coster = [],
+				x = sellsTable.querySelectorAll(".NewGameCounter"),
+				y = sellsTable.querySelectorAll(".NewGameCoster")
+
+			x.forEach((e, i) => {
+				let
+					a = y[i]
+
+				if (e.value !== "" && a.value !== "")
+					coster.push({
+						count: e.value,
+						cost: a.value
+					})
+			})
+
+			let i = document.createElement("input")
+			i.type = "hidden"
+			i.name = "gameCoster"
+			i.value = JSON.stringify(coster)
+
+			return i
+		}
+
+		for (let i = 0; i < document.forms.length; i++) {
+			document.forms.item(i).addEventListener("submit", async e => {
+				e.preventDefault()
+				let errors = false
+
+				if (e.target.getAttribute("data-table") !== null)
+					await e.target.appendChild(getCosts(e.target.querySelector("table tbody")))
+
+				let elems = e.target.elements
+				for (let j = 0; j < elems.length - 1; j++) {
+					let elem = elems.item(j)
+
+					if (elem.nodeName === "BUTTON" && elem.name.match(/Action/) !== null)
+						continue;
+
+					if (elem.classList.contains("nonSetup"))
+						continue;
+
+					clearError(elem)
+					if (elem.value === "") {
+						error(elem)
+						errors = true
+					}
+				}
+
+				if (errors)
+					console.log(document.querySelectorAll(".error"));
+				else {
+					// console.log(new URLSearchParams(new FormData(e.target)).toString());
+					e.target.submit()
+				}
+			})
+		}
+
+		const setAttr = (el, data) => {
+			el.parentNode.querySelector('[name="type"]').setAttribute("value", data);
+		}
+
+		const clearError = elem => {
+			elem.classList.remove("error")
+		}
+
+		const error = elem => {
+			elem.classList.add("error")
+		}
+
+		document.querySelectorAll(".leftsidebar li > a[data-window]").forEach(e => {
+			e.addEventListener("click", x => {
+				setWindow(e.getAttribute("data-window"))
+			})
+		})
+
+		const getImageAsBase64 = file => new Promise((resolve, reject) => {
+			const reader = new FileReader();
+			reader.readAsDataURL(file);
+			reader.onload = () => resolve(reader.result);
+			reader.onerror = error => reject(error);
+		});
+
+		document.querySelectorAll("input[type='file']").forEach(e => {
+
+			clearError(e)
+
+			e.addEventListener("change", async x => {
+				if (e.files['0'].type.split("/")['0'] === "image") {
+					let b64image = await getImageAsBase64(e.files['0'])
+					document.querySelector(`#${e.id}_content`).setAttribute("value", JSON.stringify({
+						name: e.files['0'].name,
+						b64image
+					}))
+				} else {
+					error(e)
+				}
+
+			})
+
+		})
+
+		const setWindow = windowid => {
+
+			document.querySelectorAll("section.windows > div.window.activeWindow").forEach(e => e.classList.remove("activeWindow"))
+			document.querySelector(`section.windows > div.window.${windowid}Window`).classList.add("activeWindow")
+
+		}
+
+	</script>
+
+</body>
+</html>

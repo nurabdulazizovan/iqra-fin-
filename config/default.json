@@ -1,0 +1,8 @@
+{
+	"db": {
+		"host": "localhost",
+		"user": "root",
+		"password": "psw1234567890",
+		"database": "game"
+	}
+}
